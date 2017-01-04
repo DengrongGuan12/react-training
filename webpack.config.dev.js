@@ -10,7 +10,7 @@ module.exports = {
 
     entry: {
         vendor: [  ],
-        nm:[ "./nm/index.js" ]
+        nm:[ "./nm/index.js","./nm/resource/index.less" ]
     },
 
     output: {

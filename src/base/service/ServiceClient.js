@@ -57,4 +57,29 @@ export default class ServiceClient{
         }
 
     }
+    async getAsyncListDetail(id)
+      {
+          let res = null;
+          try {
+              res = await $.ajax({
+                  url: "/api/playlist/detail",
+                  type: "GET",
+                  data: {
+                      id
+                  }
+              });
+          } catch (e) {
+              throw(e);
+          }
+
+          if (res.code === 200)
+          {
+              return res.result;
+          }
+          else
+          {
+              return res;
+          }
+
+      }
 }
